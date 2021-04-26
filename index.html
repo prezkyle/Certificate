@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Student Certificate</title>
+		<script>
+			var test = {Name: "Kyle Springborn", Nonprofit1: "Mosaic Mental Health", Achievement1: "App frontpage", Nonprofit2: "Deep Roots",
+			Achievement2: "Order page using JS"};
+			let currentDate = new Date();
+			let cDay = currentDate.getDate();
+			let cMonth = currentDate.getMonth() + 1;
+			let cYear = currentDate.getFullYear();
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script>window.$ = $;</script>
+		<style type = "text/css">
+			body
+			{
+				background-image: url(StudentCertificateBorder.jfif);
+				background-size: auto 100%;
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.image1
+			{
+				position: absolute;
+				width: 500px;
+				left: 33%;
+				top: 24%;
+			}
+			.image2
+			{
+				position: absolute;
+				width: 175px;
+				left: 23%;
+				top: 40%;
+			}
+			.image3
+			{
+				position: absolute;
+				width: 200px;
+				left: 43%;
+				top: 14%;
+			}
+			.topblockbase
+			{
+				font-size: 15px;
+				font-family: garamond;
+				color: black;
+				text-align: center;
+			}
+			.topblockedit
+			{
+				font-size: 25px;
+				font-family: garamond;
+				color: black;
+				text-align: center;
+			}
+			.bottomblock
+			{
+				font-size: 15px;
+				font-family: garamond;
+				color: black;
+				text-align: center;
+			}
+			.info_position
+			{
+				padding-top: 285px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src = "Title.jpg" class = "image1"></img>
+		<img src = "ExcellenceSeal.jpg" class = "image2"></img>
+		<img src = "VACLogo.png" class = "image3"></img>
+		<div class = "info_position">
+			<b id = "example">
+				<p class = "topblockbase">
+					This certificate is awarded to
+				</p>
+				<p id = "name" class = "topblockedit">
+				</p>
+				<p class = "topblockbase">
+					for their participation in creating an
+				</p>
+				<p id = "creation" class = "topblockedit">
+				</p>
+				<p class = "topblockbase">
+					for the nonprofits
+				</p>
+				<p id = "non_profits" class = "topblockedit">
+				</p>
+				<p id = "date" class = "bottomblock">
+					Date: 
+				</p>
+			</b>
+		</div>
+	</body>
+	<script>
+		$("#name").append(" " + test.Name);
+		$("#creation").append(test.Achievement1 + " and " + test.Achievement2);
+		$("#non_profits").append(" " + test.Nonprofit1 + " and " + test.Nonprofit2);
+		$("#date").append(" " + cMonth + "/" + cDay + "/" + cYear);
+	</script>
+</html>
